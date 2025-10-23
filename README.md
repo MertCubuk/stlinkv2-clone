@@ -1,85 +1,65 @@
-# 🔧 ST-Link V2 Clone (Rev.2) — KiCad PCB Design
+# ST-Link V2 Clone (Rev.2) — KiCad PCB Design
 
-STM32 tabanlı bir **ST-Link V2 programlayıcı** kart tasarımıdır.  
+STM32 tabanlı bir ST-Link V2 programlayıcı kart tasarımıdır.  
 Projede amaç, USB–SWD arayüzünü stabilize edecek şekilde hat eşitlemesi yapılmış,  
 üretime uygun iki katmanlı bir PCB ortaya çıkarmaktır.
 
 ---
 
-## ⚙️ Teknik Özellikler
+## Teknik Özellikler
 
-- 🧠 **Mikrodenetleyici:** STM32F103C8T6  
-- 🔌 **Bağlantı:** USB FS (12 Mbps), D+ / D− diferansiyel hat eş uzunluklu  
-- ⚡ **Besleme:** 5V → 3.3V LDO regülatör  
-- 🔒 **Koruma:** TVS diyot ile ESD koruması  
-- 📡 **Arabirim:** SWD, UART pin header (JTAG alternatifi)  
-- 🧩 **Katman sayısı:** 2  
-- 🔍 **Min. İz kalınlığı:** 0.25 mm  
-- 🕳 **Via boyutu:** 0.3 / 0.6 mm  
-- 🧱 **PCB boyutu:** Yaklaşık 70.750 × 30 mm  
-- 🧾 **DRC:** Hatasız (clearance & unconnected 0)
+- Mikrodenetleyici: STM32F103C8T6  
+- Bağlantı: USB FS (12 Mbps), D+ / D− diferansiyel hat eş uzunluklu  
+- Besleme: 5V → 3.3V LDO regülatör  
+- Koruma: TVS diyot ile ESD koruması
+- Arabirim: SWD, UART pin header (JTAG alternatifi)  
+- Katman sayısı: 2  
+- Minimum iz kalınlığı: 0.25 mm  
+- Minimum via boyutu: 0.3 / 0.6 mm  
+- PCB boyutu: Yaklaşık 70.75 × 30 mm  
+- DRC: Hatasız (clearance & unconnected 0)
 
 ---
 
-## 🧠 Tasarım Notları
+## Tasarım Notları
 
-- D+ / D− hatları eş uzunlukta ve paralel route edildi.  
+- D+ / D− hatları eş uzunlukta ve paralel olarak route edildi.  
 - 3.3V ve 5V güç yolları kalınlaştırılarak düşük dirençli hat elde edildi.  
-- Decoupling kondansatörleri MCU’ya yakın konumlandırıldı.  
+- Decoupling kondansatörleri MCU’ya fiziksel olarak en yakın konumda yerleştirildi.  
 - Kristal çevresi kısa loop ve GND guard ile izole edildi.  
 - GND plane sürekliliği korunarak düşük EMI hedeflendi.  
-- Tüm komponentler okunabilir ve üretim dostu silkscreen düzeninde yerleştirildi.
+- Bileşenlerin silkscreen konumları okunabilirlik ve üretim kolaylığına göre düzenlendi.
 
 ---
 
-## 🧩 Görseller
+## Görseller
 
 ### PCB Üst Katman (3D)
-![PCB Top](stlinkv2_clone/outputs/pcb_top.png)
+![PCB Top](outputs/pcb_top.png)
 
 ### PCB Alt Katman (3D)
-![PCB Bottom](stlinkv2_clone/outputs/pcb_bottom.png)
+![PCB Bottom](outputs/pcb_bottom.png)
 
 ### Düzenleme Görünümü (KiCad)
-![PCB Layout](stlinkv2_clone/outputs/pcb_layout.png)
+![PCB Layout](outputs/pcb_layout.png)
 
 ---
 
-## 🧰 Üretim & Çıktılar
+## Üretim ve Çıktılar
 
-- Gerber + Drill dosyaları `hardware/outputs/gerbers_drill_zip` klasöründe.  
-- JLCPCB / PCBWay üretim kurallarına tam uyumlu.  
-- Şematik dosyası `.pdf` formatında eklendi (`schematic.pdf`).  
-- BOM listesi ve netlist otomatik oluşturulabilir (`KiCad v7+` uyumlu).
-
----
-
-## 🧑‍💻 Geliştirici Notu
-
-> Bu proje eğitim ve prototip amaçlı hazırlanmıştır.  
-> Geliştirmeye açıktır: SWD pin koruma, hedef güç algılama (target power detect)  
-> ve LED status indikatörleri eklenebilir.
+- Gerber + Drill dosyaları `outputs/gerbers_drill.rar` klasöründe yer alır.  
+- JLCPCB / PCBWay üretim kurallarına uyumludur.  
+- Şematik dosyası `.pdf` formatında eklendi (`stlinkv2_schmatic.pdf`).  
+- BOM listesi ve netlist, KiCad v9+ üzerinde otomatik oluşturulabilir.
 
 ---
 
-## 📁 Klasör Yapısı
 
-stlinkv2-clone/
-│ ├─ kicad_proj_files/
-│ ├─ outputs/
-│ │ ├─ gerbers_drill_zip/
-│ │ ├─ pcb_top.png
-│ │ ├─ pcb_bottom.png
-│ │ └─ schematic.pdf
-│ └─ bom.csv
-└─ README.md
+## Tasarım
 
-
----
-
-## 👤 Tasarım
-**Mert Çubuk**  
+Mert Çubuk  
 Elektrik-Elektronik Mühendisi | Embedded Systems & PCB Design  
-📅 Ekim 2025  
-🔗 [LinkedIn](https://www.linkedin.com/in/mert-%C3%A7ubuk-06b53536a/) 
+Ekim 2025  
+LinkedIn: [https://www.linkedin.com/in/mert-%C3%A7ubuk-06b53536a/]  
+
 
