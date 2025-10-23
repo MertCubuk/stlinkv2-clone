@@ -35,13 +35,13 @@ Projede amaç, USB–SWD arayüzünü stabilize edecek şekilde hat eşitlemesi 
 ## Görseller
 
 ### PCB Üst Katman (3D)
-![PCB Top](outputs/pcb_top.png)
+![PCB Top](stlinkv2_clone/outputs/pcb_top.png)
 
 ### PCB Alt Katman (3D)
-![PCB Bottom](outputs/pcb_bottom.png)
+![PCB Bottom](stlinkv2_clone/pcb_bottom.png)
 
 ### Düzenleme Görünümü (KiCad)
-![PCB Layout](outputs/pcb_layout.png)
+![PCB Layout](stlinkv2_clone/pcb_layout.jpeg)
 
 ---
 
